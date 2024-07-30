@@ -1,0 +1,362 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/* Add some global styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', 'sans-serif';
+    scroll-behavior: smooth;
+}
+
+/* Apply margin to each section */
+section {
+    margin-top: 100px; /* Adjust the value as needed */
+}
+
+/* Keep the rest of your existing CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background: #101820;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.header, .navbar a, .home, .home-content, .home-content h3, .home-content h1, .home-content p, .home-img img, .social-media a, .btn {
+    opacity: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    cursor: default;
+    text-decoration: none;
+}
+
+.navbar a {
+    display: inline-flex;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;    
+    transition: color 0.4s;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i) + 0.5s);
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #FEE715;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content {
+    max-width: 600px;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content h3 span {
+    color: #FEE715;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.7s;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.8s;
+}
+
+.home-img {
+    max-width: 450px;
+    animation: fadeIn 1s ease forwards, zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 1.9s, 3s;
+}
+
+.home-img img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #FEE715;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #FEE715;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: calc(.2s * var(--i) + 2s);
+}
+
+.social-media a:hover {
+    background: #FEE715;
+    color: #1f242d;
+    box-shadow: 0 0 20px #FEE715;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #FEE715;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #FEE715;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.projects, .contact {
+    padding: 50px 10%;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.projects h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.projects ul, .contact form {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.project-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-box {
+    flex: 1;
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.project-box h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.project-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.project-box:hover {
+    background: #FEE715;
+    color: #1f242d;
+    transform: scale(1.05);
+}
+
+.project-box:hover p {
+    color: #1f242d;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects ul li {
+    margin-bottom: 10px;
+}
+
+.education {
+    padding: 50px 10%;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.education .title {
+    margin-bottom: 20px;
+}
+
+.education .contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.education .box {
+    flex: 1;
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.education .box:hover {
+    background: #FEE715;
+    color: #1f242d;
+    transform: scale(1.05);
+}
+
+.education .box h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.education .box h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.education .box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #FEE715;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+}
+
+.contact form button {
+    padding: 12px 28px;
+    background: #FEE715;
+    border: none;
+    border-radius: 40px;
+    color: #1f242d;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.contact form button:hover {
+    background: #fff;
+    box-shadow: 0 0 10px #FEE715;
+    color: #1f242d;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
